@@ -1,0 +1,671 @@
+body {
+    overflow: hidden;
+    display: hidden;
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif !important;
+    scroll-behavior: smooth;
+}
+
+.container {
+    display: none;
+    position: relative;
+    width: 100% !important;
+    height: 75%;
+    top: 12.5%;
+    background-color: #33415c;
+    border: 8px solid rgb(32, 32, 32);
+    border-radius: 5px;
+    overflow-y: auto;
+    padding-bottom: 2.5%;
+    animation: slide-up 0.5s;
+}
+
+#welcome-officer-name {
+    position: absolute;
+    top: 12.5%;
+    margin-left: 7.5%;
+    font-weight: 600;
+}
+
+.delete-wanted {
+    position: absolute;
+    left: 41%;
+    color: grey;
+    transition: color .25s;
+}
+
+.wanted-icon-vehicle, .wanted-icon-citizen {
+    position: relative;
+    left: 7.5%;
+    top: 32.5%;
+    font-size: smaller;
+    color: grey;
+    text-align: center;
+}
+
+.wanted-icon-vehicle {
+    font-size: medium;
+}
+
+.delete-wanted:hover {
+    color: crimson;
+}
+
+.home-image {
+    position: absolute;
+    width: 10%; 
+    top: 15%;
+    left: 40%;
+    height: 45%;
+}
+
+.header {
+    position: absolute;
+    width: 100% !important;
+    left: 0;
+    right: 0;
+    height: 30%;
+    background-color: #001233;
+}
+
+.header-button, .create-bolo, .wanted-submit {
+    font-weight: 600;
+
+    position: relative;
+    background-color: #0466c8;
+    color: white;
+    border: none;
+    padding: 1%;
+    width: 10%;
+    border-radius: 5px;
+    float: left;
+    left: 15%;
+    top: 70%;
+    margin-right: 20%;
+}
+
+.create-bolo, .wanted-submit {
+    background-color: #001233;
+    left: 12.5%;
+    margin-top: 1%;
+    top: 0;
+    margin-right: 5%;
+    width: 35%;
+}
+
+.wanted-submit {
+    margin-top: 1.5%;
+    width: 75%;
+}
+
+#home-button, #destroy, .change-recent-police {
+    position: absolute;
+    margin: auto;
+    width: 3.5%;
+    height: 15%;
+    padding: 0.5% 1% 0.5% 1%;
+    border-radius: 5px;
+    top: 10%;
+    left: 3%;
+    background-color: #64739e;
+    color: white;
+    z-index: 99;
+    font-size: large;
+}
+
+.change-recent-police {
+    margin-top: 1%;
+    margin-left: 90%;
+    height: 55%;
+    width: 5%;
+    border: none;
+}
+
+#active-polices {
+    display: none;
+}
+
+#destroy {
+    left: 94%;
+    font-size: large;
+}
+
+#home-button {
+    padding-left: 0.75%;
+}
+
+.header-label {
+    font-weight: 600;
+
+    position: absolute;
+    display: inline-block;
+    color: white;
+    right: 22.5%;
+    top: 20%;
+    right: 33.75%;
+    text-align: left;
+    font-size: x-large;
+    width: 15%;
+}
+
+.label-bar {
+    font-weight: 600;
+    position: relative;
+    width: 75%;
+    height: 7.5%;
+    left: 12.5%;
+    margin-top: 5%;
+    background-color: #001233;
+    padding-top: 1.5%;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    transition: margin-top 1s;
+}
+
+.page {
+    position: relative;
+    top: 30%;
+    margin-bottom: 5%;
+}
+
+.new-actions {
+    font-weight: 400;
+}
+
+.inner-divs, .search-results, .vehicle-results {
+    position: relative;
+    width: 75%;
+    height: 50%;
+    left: 12.5%;
+    background-color: #f0f0f0;
+    border-right: 5px solid #023e7d;
+    border-left: 5px solid #023e7d;
+    border-radius: 5px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    font-weight: 500;
+}
+
+.search-results, .vehicle-results {
+    position: absolute;
+    height: 0%;
+    transition: height 0.5s, opacity 0.5s;
+    overflow-y: scroll;
+}
+
+.search-bar, #report-name {
+    position: relative;
+    width: 75%;
+    height: 7.5%;
+    left: 12.5%;
+    border-radius: 5px;
+    margin-bottom: 1%;
+    border: none;
+    text-align: center;
+    background-color: #f0f0f0;
+    border-right: 5px solid #023e7d;
+    border-left: 5px solid #023e7d;
+    font-weight: 700;
+
+}
+#create-bolo-label {
+    margin-top: 12.5%;
+}
+
+.inner-image {
+    position: absolute;
+    display: inline-block;
+    width: 5%;
+    height: 12.5%;
+    border-radius: 100px;
+    margin-left: 40%;
+    margin-bottom: 2.25%;
+    margin-top: 3.25%;
+}
+
+#report-desc {
+    position: relative;
+    width: 75%;
+    height: 20%;
+    left: 12.5%;
+    background-color: #f0f0f0;
+    border: none;
+    border-right: 5px solid #023e7d;
+    border-left: 5px solid #023e7d;
+    border-radius: 5px;
+    text-align: center;
+    padding: 3%;
+    font-weight: 500;
+}
+
+*:hover, *:active, *:focus{
+    outline: none;
+}
+
+.search-button {
+    position: absolute;
+    left: 90%;
+    top: 155%;
+    font-size: x-large;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: rgb(27, 27, 27);
+    z-index: 99;
+}
+
+.actions, .actions-js, .wanteds-js, .dispatches-js, .actions-cops {
+    width: 100%;
+    height: 25%;
+    background-color: #f0f0f0;
+    color: black;
+}
+
+#dispatch {
+    display: none;
+}
+
+
+.list-names, .vehicle-list {
+    width: 100%;
+    height: 25%;
+    background-color: #f0f0f0;
+    color: black;
+    transition: font-size 0.25s;
+}
+
+.actions p, .list-names p, .vehicle-list p, .actions-js p, .wanteds-js p, .dispatches-js p, .actions-cops p {
+    position: relative;
+    display: inline-block;
+    width: 15%;
+    top: 32.5%;
+    text-align: center;
+}
+
+.list-names p {
+    width: 100%;
+    top: 15%;
+}
+
+.list-names:hover, .vehicle-list:hover {
+    font-size: large;
+}
+
+.officer-name, .vehicle-results-plate, .wanted-name, .action-name, .dispatch-code {
+    left: 6.5%;
+    border-bottom: 2px solid rgb(202, 202, 202);
+    padding-bottom: 1%;
+
+}
+
+.delet-wanted {
+    position: relative;
+    z-index: 99;
+}
+
+.vehicle-results-plate {
+    left: -8.5%;
+}
+
+.dispatches-js i {
+    padding-top: 3%;
+    left: 49%;
+    width: 50%;
+    height: 50%;
+    color: #ffce5c !important;
+    transition: font-size .25s !important;
+}
+
+.dispatches-js i:hover {
+    font-size: xx-large !important;
+}
+
+.officer-action, .search-results-name, .wanted-purpose, .vehicle-results-model, .action-action, .dispatch-label {
+    left: 27.5%;
+    border-bottom: 2px solid rgb(202, 202, 202);
+    padding-bottom: 1%;
+}
+
+.vehicle-results-model {
+    left: 12.5%;
+}
+
+.timestamp, .vehicle-results-name, .timestamp-dispatch {
+    left: 47.5%;
+    border-bottom: 2px solid rgb(202, 202, 202);
+    padding-bottom: 1%;
+} 
+
+.vehicle-results-name {
+    border: none;
+    left: 33.5%;
+}
+
+.wanted-name {
+    width: 25% !important;
+    left: 1%;
+}
+
+#wanted-officer {
+    left: 12.5%;
+    width: 25% !important;
+}
+
+.search-results-name, .vehicle-results-model, .vehicle-results-plate, .wanted-name, .wanted-purpose, .action-name, .action-action {
+    border: none;
+    margin-top: 0.5%;
+}
+
+.wanted-purpose {
+    width: 35% !important;
+    left: 7.5%;
+    font-weight: 400;
+}
+
+.search-results-name {
+    left: 47.5%;
+    top: 0;
+    margin-bottom: 1%;
+    text-align: left !important;
+}
+
+.vehicle-results {
+    margin-bottom: 5%;
+}
+
+.line {
+    position: static;
+    width: 100%;
+    height: 7.5%;
+    margin-top: 3.5%;
+    background-color: #001233;
+}
+
+/* #001233 */
+#query-citizen {
+    margin-top: 12.5%;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+::-webkit-scrollbar
+{
+    width: 4px;
+}
+
+::-webkit-scrollbar-thumb
+{
+    background-color: #0080ff;
+}
+
+#warning {
+    position: absolute;
+    min-width: 25%;
+    display: none;
+    left: 37.5%;
+    text-align: center;
+    top: 35%;
+    color: white;
+    font-size: larger;
+    font-weight: 500;
+    z-index: 99;
+}
+
+.back-action {
+    position: absolute;
+    z-index: 99;
+    right: 3%;
+    top: 7.5%;
+}
+
+.citizen-image {
+    position: relative;
+    float: left;
+    margin-left: 2.5%;
+    width: 20%;
+    height: 25%;
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+.citizen-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15%;
+    border: 4px solid rgb(216, 216, 216);
+}
+
+.citizen-info-name-area {
+    position: relative;
+    width: 71.5%;
+    margin-top: 2.5%;
+    height: 15%;
+    margin-left: 25%;
+    background-color: #001233;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    overflow-y: auto;
+}
+
+.citizen-info-name-area p {
+    padding-top: 5%;
+}
+
+.info-main-wrap {
+    position: relative;
+    width: 71.5%;
+    margin-top: 1.5%;
+    height: 80%;
+    margin-left: 25%;
+    background-color: #001233;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    overflow-y: auto;
+}
+
+.info-side-bar {
+    position: absolute;
+    float: left;
+    top: 27.5%;
+    margin-left: 2.5%;
+    width: 20%;
+    height: 72.5%;
+    background-color: #001233;
+    border-radius: 10px;
+    overflow: auto;
+    font-weight: 500;
+}
+
+.info-side-bar-inner {
+    width: 90%;
+    height: 15%;
+    margin: 2.5%;
+    margin-bottom: 10%;
+    /* border-radius: 10px; */
+    margin-left: 5%;
+    padding-bottom: 52.5%;
+    background-color: #001233;
+    color: white;
+    border-bottom: 2px solid white;
+    transition: background-color 0.5s;
+}
+
+/* .info-side-bar-inner:hover {
+    background-color: #2f4c94;
+
+} */
+
+.info-side-bar-inner p {
+
+    text-align: center;
+}
+
+.notify-container {
+    position: relative;
+    display: none;
+    width: 50%;
+    height: 75%;
+    top: 87.5%;
+    left: 25%;
+    background-color: #001233;
+    border: 8px solid rgb(32, 32, 32);
+    overflow-x: auto;
+    border-radius: 5px;
+    animation: slide-up 0.5s;
+}
+
+.notify-message {
+    position: relative;
+    color: white;
+    font-size: x-large;
+    text-align: center;
+    font-weight: 500;
+    width: 100%;
+    height: 20%;
+    top: 35%;
+    animation: slide-right 15s;
+}
+
+.notify-message p {
+    left: -100%;
+}
+
+.info-new-add-note, .info-new-list-note, .info-new-add-bolo, .info-new-list-bolos {
+    width: 45%;
+    height: 55%;
+    float: left;
+    background-color: #2b4179;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    margin-left: 3.5%;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    border-radius: 10px;
+    font-weight: 600;
+    overflow-y: auto;
+}
+
+.info-new-add-note p, .info-new-list-note p, .info-new-add-bolo p, .info-new-list-bolo p, .info-new-list-bolos p  {
+    padding-top: 5%;
+}
+
+.any-text-vehicles,.any-text-bolos, .any-text-notes {
+    margin-top: 25%;
+    font-size: large;
+}
+
+.note-inputs, .bolo-inputs {
+    margin-top: 2.5%;
+    border-radius: 10px;
+    width: 85%;
+    height: 15%;
+    text-align: center;
+    border: none;
+    font-weight: 500;
+}
+
+.note-inputs[type=submit], .bolo-inputs[type=submit] {
+    margin-top: 7.5%;
+    height: 12.5%;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    font-weight: 500;
+    transition: background-color 0.25s;
+}
+
+.note-inputs[type=submit]:hover, .bolo-inputs[type=submit]:hover {
+    background-color: #002855;
+}
+
+#note-text {
+    height: 50%;
+}
+
+.info-note-text, .info-bolo-text {
+    margin-left: 7.5%;
+    margin-top: 2.5%;
+    width: 85%;
+    height: auto;
+    background-color: white;
+    border-radius: 10px;
+    color: black;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-bottom: 2.5%;
+}
+
+.info-note-text .info-text, .info-bolo-text .info-text {
+    position: relative;
+    margin-top: -15%;
+    margin-left: 7.5%;
+    text-align: center;
+    width: 85%;
+}
+
+.delete-record {
+    background-color: red;
+    color: white;
+    width: 5% !important;
+    top: 2%;
+    height: 10%;
+    margin-left: 92.5%;
+    border-radius: 5px;
+    font-size: xx-small;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    transition: background-color 0.25s, color 0.25s;
+}
+
+.delete-record:hover {
+    color: rgb(139, 0, 0) !important;
+    background-color: white;
+}
+
+.info-vehicles {
+    min-width: 20%;
+    max-width: fit-content;
+    height: 27.5%;
+    margin-left: 3.5%;
+    margin-top: 2%;
+    float: left;
+    padding-top: 0.5%;
+    padding-left: 0.5%;
+    background-color: #0353a4;
+    border-radius: 10px;
+}
+
+@keyframes slide-up{
+    0% {
+        transform:  translate(0px,100%)  ;
+    }
+    100% {
+        transform:  translate(0px,0px)  ;
+    }
+}
+
+@keyframes slide-right{
+    0% {
+        transform:  translate(75%,0px)  ;
+    }
+    100% {
+        transform:  translate(-100%, 0px)  ;
+    }
+}
+
+@keyframes slide-down{
+    0% {
+        transform:  translate(0px,0px)  ;
+    }
+    100% {
+        transform:  translate(0px,100%)  ;
+    }
+}

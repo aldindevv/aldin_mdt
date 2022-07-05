@@ -1,0 +1,182 @@
+<html>
+	<head>
+		<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+		<script src="./script.js" type="text/javascript"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,600&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="style.css" type="text/css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	</head>
+	<body>
+		<div class="notify-container">
+			<div class="header" id="home">
+				<button class="header-button" id="home-button" name="#recent"> <i class="fas fa-home"></i> </button>
+				<button class="header-button" id="destroy" name="destroy"> <i class="fas fa-times"></i> </button>
+				<div class="notify-message"> <p id="notify-message">Policajac Rocky Balboa je dodao novu traženu osobu</p>  </div>
+			</div>
+		</div>
+		<div class="container">
+			<!-- <span class="destroy"> X </span> -->
+			<div class="header" id="home">
+				<img class="home-image" src="police-badge.png" alt="">
+				<p class="header-label"> Policija </p>
+				<button class="header-button" id="home-button" name="#recent"> <i class="fas fa-home"></i> </button> <p id="welcome-officer-name" style="color: white; border: none; display: inline-block;"> Willkommen </p>
+				<button class="header-button" name="#wanted-list"> Trazeni </button>
+				<button class="header-button" name="#query"> upit </button>
+				<!-- <button class="header-button" name="#report"> Report </button> -->
+				<button class="header-button" name="#dispatch"> oTprema </button>
+				<button class="header-button" id="destroy" name="destroy"> <i class="fas fa-times"></i> </button>
+			</div>
+			<div class="page">
+				<div id="recent">
+					<p class="label-bar"> Zadnje Akcije <button class="change-recent-police" name="#active-polices"> <i class="fas fa-exchange-alt"></i> </button> </p>
+					<div class="inner-divs" id="recent-actions">
+						<div class="actions">
+							<p class="officer-name">Ime sluzbenika</p>
+							<p class="officer-action">Akcija</p>
+							<p class="timestamp">Vremenska oznaka</p>
+						</div>
+						<div class="new-actions">
+
+						</div>
+					</div>
+				</div>
+
+				<div id="active-polices">
+					<p class="label-bar"> Aktivni sluzbenici <button class="change-recent-police" name="#recent"> <i class="fas fa-exchange-alt"></i> </button> </p>
+					<div class="inner-divs" id="recent-actions">
+						<div class="actions">
+							<p class="officer-name">Sluzbenik</p>
+							<p class="officer-action" style="border: none;"></p>
+							<p class="timestamp">rank</p>
+						</div>
+						<div id="cops-online">
+
+						</div>
+					</div>
+				</div>
+				
+				<!-- <div id="active-polices">
+					<p class="label-bar"> Active Cops </p>
+					<div class="inner-divs" id="cops-online">
+						<div class="actions"><p class="officer-name">Officer Name</p><p class=""></p><p class="timestamp">Rank</p>
+						</div>
+					</div>
+				</div> -->
+		
+
+				<!-- <div class="line"></div> -->
+				<div id="wanted-list">
+					<p class="label-bar"> Lista trazenih </p>
+					<div class="inner-divs">
+						<div class="actions">
+							<p class="officer-name">trazeni</p>
+							<p class="officer-action">Razlog</p>
+							<p class="timestamp">Vrijeme</p>
+						</div>
+						<div class="new-wanteds">
+							<!-- <p class="wanted-name">cylex hasan nitros</p><p class="wanted-purpose">Araç Çalmak, Ev Soymak, Gasp</p><p class="timestamp" style="border: none" id="wanted-officer">cylex hasan nitros </p>  -->
+						</div>
+					</div>
+					<button class="create-bolo" id="create-citizen-bolo"> kreirajte unos gradjanina </button>
+					<button class="create-bolo" id="create-vehicle-bolo"> Kreirajte unos vozila </button>
+				</div>
+				<!-- <div class="line"></div> -->
+				<div id="query">
+					<p class="label-bar" id="query-citizen"> Pitati gradjane <button class="search-button" id="search-button-citizen" type="submit"><i class="fa fa-search"></i></button></p>
+					
+
+					<input type="text" name="search-bar" class="search-bar" id="search-button-citizen-bar" placeholder="Bürger suchen">
+					<div class="search-results">
+						<p class="back-action" id="search-results"><i class="fas fa-times"></i></p>
+						<div class="actions">
+							<p class=""></p>
+							<p class="officer-action">ime</p>
+							<p class=""></p>
+						</div>
+						<!-- <div class="actions">
+							<p class=""></p>
+							<p class="search-results-name">fizzfau</p>
+							<p class=""></p>
+						</div>
+						<div class="actions">
+							<p class=""></p>
+							<p class="search-results-name">nitros</p>
+							<p class=""></p>
+						</div> -->
+					</div>
+					<p class="label-bar" id="vehicle-search-label"> Upit vozila <button class="search-button" id="search-button-vehicle" type="submit"><i class="fa fa-search"></i></button></p>
+					
+					<input type="text" name="search-bar" class="search-bar" id="search-button-vehicle-bar" placeholder="Fahrzeug suchen">
+					<div class="vehicle-results">
+						<p class="back-action" id="vehicle-results"><i class="fas fa-times"></i></p>
+						<div class="actions">
+							<p class="officer-name">tablice</p>
+							<p class="officer-action">Model</p>
+							<p class="timestamp">Vlasnik</p>
+						</div>
+					</div>
+				</div>
+
+				<div id="report">
+					<p class="label-bar" id="create-bolo-label">Napravite Izvjestaj </p>
+					<input type="text" name="report-name" id="report-name" placeholder="Citizen Name">
+					<textarea name="report-desc" id="report-desc" cols="30" rows="10" placeholder="Text eingeben"></textarea>
+					<input type="submit" class="wanted-submit" value="Submit">
+					<!-- <input type="text" name="report-desc" id="report-desc" placeholder="Add Description">  -->
+				</div>
+
+				<div class="info" id="info" style="display: none;">
+					<div class="citizen-image" id="citizen-image"> 
+						<img id="user-image" src="https://media.discordapp.net/attachments/610776060744957953/812758720626032690/unnamed.png" alt="default">
+					</div>
+					<div class="citizen-info-name-area"></div>
+					<div class="info-side-bar">
+						<div class ="info-side-bar-inner" style="margin-top: 10%;"><p style="padding-top: 5%;"> <b>Name</b></p> <p id="name"> fizzfau fizzfau </p> </div>
+						<div class ="info-side-bar-inner" style="margin-top: 10%;"><p style="padding-top: 5%;"> <b>Staatsangehörigkeit</b></p> <p id="height"> 181 cm </p> </div>
+						<div class ="info-side-bar-inner" ><p style="padding-top: 5%;"> <b>Job</b></p> <p id="job"> Arbeitslos </p> </div>
+						<div class ="info-side-bar-inner" ><p style="padding-top: 5%;"> <b>Geschlecht</b></p> <p id="gender"> Männlich </p> </div>
+						<div class ="info-side-bar-inner" ><p style="padding-top: 5%;"> <b>Bank</b></p> <p id="bank"> 2433$ </p> </div>
+						<div class ="info-side-bar-inner"  style="margin-bottom: -2.5%; border: none;"><p style="padding-top: 5%;"> <b>Phone</b></p> <p id="phone"> 24387523 </p> </div>
+					</div>
+					<div class="info-main-wrap">
+						<div class="info-new-add-bolo">
+							<p class="info-new-add-label"> Add Bolo </p>
+							<input class="bolo-inputs" type="text" name="bolo-label" id="bolo-title" placeholder="Total Fine"></input> <br>
+							<input class="bolo-inputs" type="text" name="bolo-image" id="bolo-image" placeholder="Image URL"></textarea> <br>
+							<textarea class="bolo-inputs" type="text" name="bolo-text" id="bolo-text" placeholder="Purpose"></textarea> <br>
+							<input class="bolo-inputs" id="bolo-inputs-submit" type="submit" name="submit-bolo" value="Submit">
+						</div>
+						<div class="info-new-add-note">
+							<p class="info-new-add-label"> Add Hinweise </p>
+							<!-- <input class="note-inputs" type="text" name="note-label" id="note-label" placeholder="Add Title"> -->
+							<textarea class="note-inputs" type="text" name="note-text" id="note-text" placeholder="Add Description"></textarea> <br>
+							<input class="note-inputs" id="note-inputs-submit" type="submit" name="submit-note" value="Submit">
+						</div>
+						<div class="info-new-list-bolos"><p class="info-new-list-label"> Bolos </p>
+							
+							<!-- <div class="info-bolo-text"><p class="delete-record"><i class="fas fa-times"></i> </p><p class="info-text"></p> <b>Fine</b> <br> <p>3 months</p>  <br> <b>Purpose</b> <br> <p> Enayilik yabtı </p>  <br> </div>						 -->
+							
+						</div>
+						<div class="info-new-list-note"><p class="info-new-list-label"> Hints </p>
+							<!-- <div class="info-note-text"><p class="delete-record"><i class="fas fa-times"></i> </p><p class="info-text"></p></div> -->
+							
+						</div>
+					</div>
+				</div>
+				<div id="dispatch">
+					<p class="label-bar"> Otprema </p>
+					<div class="inner-divs">
+						<div class="actions">
+							<p class="officer-name"> kod </p>
+							<p class="officer-action"> Etikete </p>
+							<p class="timestamp"> Lokacija </p>
+						</div>
+						<div class="new-dispatches">
+						</div>
+					</div>
+				</div>
+			</div>
+			<p id="warning">Ovo mora biti popunjeno!</p>
+	</body>
+</html
